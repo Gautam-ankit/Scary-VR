@@ -1,0 +1,832 @@
+<html>
+	<head>
+		<script type="text/javascript" src="aframe.min.js"></script>
+		<script type="text/javascript" src="aframe-text-geometry-component.min.js"></script>
+		<title>My Scary VR </title>
+	</head>
+	<body>
+		<a-scene>
+
+					<a-assets>
+							 <img id="groundTexture" src="grass.jpg" repeat="1000 1000">
+							 <img id="skytexture" src="sky.jpg">
+							 <img id="walltexture" src="walls.jpg">
+							 <img id="footpath" src="footpath.jpg">
+							 <img id="roof" src="roof.jpg">
+							 <img id="road" src=road.jpg>
+							 <img id="flower" src="flowers.jpg">
+							 <img id="field" src="field.jpg">
+							 <img id="river" src="river.jpg">
+							 <img id="windows" src="window.jpg">
+							 <img id="windows1" src="window1.jpg">
+							 <img id="windows2" src="window2.jpg">
+							 <img id="poll" src="poll.jpg">
+							 <img id="railway" src="railway.jpg">
+							 <img id="floor" src="floor.jpg">
+							 <img id="mountain" src="mountain.jpg">
+							 <sound id="riversound" src="rive.mp3">
+							 <sound id="scaredsound" src="scared.mp3">
+							 <img id="city" src="building.jpg">
+							 <video id="videos" src="scaryvv.mp4" autoplay="true" loop="true">
+							 <video id="svideo" src="lrscary.mp4" autoplay="true" loop="true">
+    						 <img id="city" src="building.jpg">
+    						 <img id="bridge" src="scary.jpg">
+    						 <img id="mountain" src="mountain.jpg">
+    						 <img id="lrcity" src="lrcity.jpg">
+    						 <img id="rdcity" src="buildingroad.jpg">
+    						 <img id="scare1" src="scary.jpg">
+    						 <img id="scare2" src="scary1.jpg">
+    						 <img id="scare3" src="scarya.jpg">
+    						 <img id="scare4" src="scaryb.jpg">
+    						 <img id="bed1" src="bed.jpg">
+    						 <img id="mbed" src="mbed.jpg">
+    						 <img id="doors" src="door.jpg">
+    						 <img id="fgrass" src="fgrass.jpg">
+    						 <a-asset-item id="skull" src="scene.gltf"></a-asset-item>
+    						 <a-asset-item id="skeleton" src="sscene.gltf"></a-asset-item>
+    						 <img id="aniscare1" src="aniscare1.jpg">
+    						 <img id="aniscare2" src="aniscare2.jpg">
+					</a-assets>
+				<!--	ground 	-->
+					<a-plane src="#flower" rotation="-90 0 0" width="10000" height="10000"></a-plane>
+	        		<a-light type="ambient" color="#445451"></a-light>
+
+
+	        	<!--	skeletons	-->
+
+
+					<a-entity gltf-model="#skeleton" position="32 5.5 -35">
+						<a-animation attribute="rotation" dur="10000" to="0 -360 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="58 3.8 -23">
+						<a-animation attribute="rotation" dur="10000" to="0 270 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="42 3.5 -33">
+						<a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="52 4.5 -26">
+						<a-animation attribute="rotation" dur="10000" to="0 -270 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					
+					<a-entity gltf-model="#skeleton" position="-48 3.5 -25">
+						<a-animation attribute="rotation" dur="10000" to="0 -90 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="-76 3.5 -17">
+						<a-animation attribute="rotation" dur="10000" to="0 180 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="-36 3.5 -11">
+						<a-animation attribute="rotation" dur="10000" to="0 -180 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="-65 3.5 -36">
+						<a-animation attribute="rotation" dur="10000" to="90 0 0" repeat="indefinite"></a-animation>
+					</a-entity>
+
+		    	<!--	zoombies	-->
+
+
+					<a-entity gltf-model="#skeleton" position="32 5.5 5">
+						<a-animation attribute="rotation" dur="10000" to="0 -360 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="58 3.8 3">
+						<a-animation attribute="rotation" dur="10000" to="0 270 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="42 3.5 -33">
+						<a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="52 4.5 -26">
+						<a-animation attribute="rotation" dur="10000" to="0 -270 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					
+					<a-entity gltf-model="#skeleton" position="48 3.5 -5">
+						<a-animation attribute="rotation" dur="10000" to="0 -90 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="76 3.5 -17">
+						<a-animation attribute="rotation" dur="10000" to="0 180 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="36 3.5 1">
+						<a-animation attribute="rotation" dur="10000" to="0 -180 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="65 3.5 13">
+						<a-animation attribute="rotation" dur="10000" to="0 0 90" repeat="indefinite"></a-animation>
+					</a-entity>
+
+
+					<a-entity gltf-model="#skeleton" position="-32 5.5 -10">
+						<a-animation attribute="rotation" dur="10000" to="0 -360 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="-58 3.8 -23">
+						<a-animation attribute="rotation" dur="10000" to="0 270 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="-42 3.5 33">
+						<a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					
+					
+					<a-entity gltf-model="#skeleton" position="-48 3.5 -8">
+						<a-animation attribute="rotation" dur="10000" to="0 -90 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="-76 3.5 27">
+						<a-animation attribute="rotation" dur="10000" to="0 180 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="-36 3.5 -1">
+						<a-animation attribute="rotation" dur="10000" to="0 -180 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="-65 3.5 -6">
+						<a-animation attribute="rotation" dur="10000" to="90 0 0" repeat="indefinite"></a-animation>
+					</a-entity>
+		
+				<!-- 	interior home designing	-->
+
+					<a-entity gltf-model="#skeleton" position="17 2 10">
+						<a-animation attribute="rotation" dur="10000" to="0 -360 0" repeat="indefinite"></a-animation>
+					</a-entity>
+					<a-entity gltf-model="#skeleton" position="-17 2 10">
+						<a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite"></a-animation>
+					</a-entity>
+
+
+					<a-curvedimage position="-14 0 15" height="12.0" radius="5.7" theta-length="72"
+		                 rotation="0 -100 0" scale="0.8 0.8 0.8" src="#scare1"></a-curvedimage>
+					<a-curvedimage position="-14 0 5" height="12.0" radius="5.7" theta-length="75"
+                 		 rotation="0 -150 0" scale="0.8 0.8 0.8" src="#scare2"></a-curvedimage>
+                 	<a-curvedimage position="20 0 15" height="12.0" radius="5.7" theta-length="79"
+		                 rotation="0 -110 0" scale="0.8 0.8 0.8" src="#scare3"></a-curvedimage>
+					<a-curvedimage position="20 0 5" height="12.0" radius="5.7" theta-length="79"
+                 		 rotation="0 -110 0" scale="0.8 0.8 0.8" src="#scare4"></a-curvedimage>
+
+                 	<a-box position="18 0.6 -15" rotation="90 0 0" width="2"  height="4" src="#bed1"></a-box>
+                 	<a-box position="18.6 0.6 -15" rotation="0 90 0" width="4" height="4" src="#bed1"></a-box>
+
+                 	<a-box position="-18 0.6 -15" rotation="90 0 0" width="2"  height="4" src="#bed1"></a-box>
+                 	<a-box position="-18.6 0.6 -15" rotation="0 90 0" width="4" height="4" src="#bed1"></a-box>
+
+                 	<a-box position="15 0.5 -15" rotation="90 0 0" width="2" height="3" src="#mbed"></a-box>
+                 	<a-box position="-15 0.5 -15" rotation="90 0 0" width="2" height="3" src="#mbed"></a-box>
+				
+				<!-- 	Scenes  -->
+					 <a-box position="0 35 -245" rotation="0 0 0" src="#rdcity" width="895" height="140"></a-box>
+ 					 <a-box position="0 35 245" rotation="0 0 0" src="#lrcity" width="895" height="140"></a-box>
+					 <a-box position="345 35 75" rotation="0 90 0" src="#lrcity" width="245" height="100"></a-box>
+   					 <a-box position="-345 35 75" rotation="0 90 0" src="#lrcity" width="245" height="100"></a-box>
+   		
+        		<!-- sky of ryan color with some asteriods -->
+				
+				<a-sky src="#skytexture" rotation="0 -90 0"></a-sky>
+				
+				<a-entity>
+  						<a-entity gltf-model="#skull" position="-18 60 -5"></a-entity>
+  						<a-entity gltf-model="#skull" position="-4 50 -5"></a-entity>
+  						<a-entity gltf-model="#skull" position="-23 40 -5"></a-entity>
+  						
+  						<a-animation attribute="rotation"
+               				easing="linear"
+               				dur="10000"
+               				fill="forwards"
+               				to="0 360 0"
+               				repeat="indefinite"></a-animation>
+				</a-entity>
+				<a-entity>
+  						<a-entity gltf-model="#skull" position="054 30 -5"></a-entity>
+  						<a-entity gltf-model="#skull" position="03 40 -5"></a-entity>
+  						<a-entity gltf-model="#skull" position="0112 50 -5"></a-entity>
+  						<a-entity gltf-model="#skull" position="022 60 -5"></a-entity>
+  						
+  						<a-animation attribute="rotation"
+               				easing="linear"
+               				dur="10000"
+               				fill="forwards"
+               				to="0 -360 0"
+               				repeat="indefinite"></a-animation>
+				</a-entity>
+
+
+			<!--	floor of the buildings	 -->
+
+				<a-box position="13 -0.4 -15" rotation="90 0 0" width="15" height="12" src="#floor"></a-box>
+				<a-box position="-13 -0.4 -15" rotation="90 0 0" width="15" height="12" src="#floor"></a-box>
+				<a-box position="13 -0.4 10" rotation="90 0 0" width="15" height="23" src="#floor"></a-box>
+				<a-box position="-13 -0.4 10" rotation="90 0 0" width="15" height="23" src="#floor"></a-box>
+
+			<!--	video for horror	-->
+				<a-box position="19.8 0 -15" rotation="0 90 0" width="10" height="10" src="#svideo"></a-box>
+				<a-box position="-19.8 0 -15" rotation="0 90 0" width="10" height="10" src="#svideo"></a-box>
+				 
+			<!--  bridge over river	-->
+
+					<a-torus src="#bridge" position="0 0.5 -70" arc="180" radius="15" radius-tubular="1.5" rotation="0 90 0" scale="2.5  1  2.5"  width="5120"></a-torus>
+					<a-torus src="#mbed" position="4 0.5 -70" arc="180" radius="16" radius-tubular="0.07" rotation="0 90 0" scale="3  1.2  3"  width="5120"></a-torus>
+					<a-torus src="#mbed" position="-4 0.5 -70" arc="180" radius="16" radius-tubular="0.07" rotation="0 90 0" scale="3  1.2  3"  width="5120"></a-torus>
+
+					<!--	river	-	flowers	-	fields	-->
+
+						<a-box position="0 0 -75" width="570" height="70" rotation="90 0 0" src="#river" sound="src: url(rive.mp3); autoplay : true ; maxDistance: 10; rollOffFactor: 1; refDistance: 1; loop:true"></a-box>
+						<a-box position="-55.5  -0.5 0" width="70" height="56" rotation="90 0 0" src="#flower"></a-box>
+						<a-box position="55.5 -0.5 0" width="70" height="56" rotation="90 0 0" src="#flower"></a-box>
+						<a-box position="0 -0.5 63" width="270" height="70" rotation="90 0 0" src="#flower"></a-box>
+
+        	<!-- 	doors and windows codes	-->
+
+        	<a-box position="13 3 -8.4" rotation="0 0 0" width="3" height="6" src="#doors"></a-box>
+        	<a-box position="-13 3 -8.4" rotation="0 0 0" width="3" height="6" src="#doors"></a-box>
+
+        	<a-box position="13 3 -01.6" rotation="0 0 0" width="3" height="6" src="#doors"></a-box>
+        	<a-box position="-13 3 -01.6" rotation="0 0 0" width="3" height="6" src="#doors"></a-box>
+
+        	<a-box position="-5.95 3.5 -10" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-box>
+        	<a-box position="-5.95 3.5 -15" rotation="0 90 0" src="#windows1" width="1" height="2"></a-box>
+        	<a-box position="-5.95 3.5 -20" rotation="0 90 0" src="#windows2" transparent="true" width="1" height="2"></a-box>
+        	
+        	<a-box position="-5.95 3.5 3" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-box>
+        	<a-box position="-5.95 3.5 8" rotation="0 90 0" src="#windows2" transparent="true" width="1" height="2"></a-box>
+        	<a-box position="-5.95 3.5 13" rotation="0 90 0" src="#windows1" width="1" height="2"></a-box>
+        	<a-box position="-5.95 3.5 18" rotation="0 90 0" src="#windows" transparent="true" width="1" height="2"></a-box>
+        	
+        	<a-box position="5.95 3.5 -10" rotation="0 -90 0" src="#windows" width="1" height="2"></a-box> 
+        	<a-box position="5.95 3.5 -15" rotation="0 -90 0" src="#windows2" width="1" height="2"></a-box> 
+        	<a-box position="5.95 3.5 -20" rotation="0 -90 0" src="#windows1" width="1" height="2"></a-box> 
+        	
+        	<a-box position="5.95 3.5 3" rotation="0 -90 0" src="#windows2" width="1" height="2"></a-box> 
+        	<a-box position="5.95 3.5 8" rotation="0 -90 0" src="#windows1" width="1" height="2"></a-box> 
+        	<a-box position="5.95 3.5 13" rotation="0 -90 0" src="#windows" width="1" height="2"></a-box> 
+        	<a-box position="5.95 3.5 18" rotation="0 -90 0" src="#windows2" width="1" height="2"></a-box>
+			
+
+			<!--   Road code initilization  -->
+				<a-box position="0 -0.5 -5" width="6" height="55" rotation="-90 0 0" src="#road" sound="src: url(scared.mp3); autoplay : true ; maxDistance: 10; rollOffFactor: 1; refDistance: 1; loop:true volume: 100"></a-box>
+				
+				<a-box position="0 -0.45 -25" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 -20" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 -15" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 -10" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+
+				<a-box position="0 -0.45 -5" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 0" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 5" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 10" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 15" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+				<a-box position="0 -0.45 20" width="0.5" height="2.5" rotation="-90 0 0" color="white"></a-box>
+
+			<!--   Left/right road code at location -5 -->
+				<a-box position="6 -0.5 -5" width="29" height="6" rotation="-90 0 0" src="#road"></a-box>
+				<a-box position="-6 -0.5 -5" width="29" height="6" rotation="-90 0 0" src="#road"></a-box>
+						
+						<!-- white lines in left road-->
+						<a-box position="7 -0.45 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-7 -0.45 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="12 -0.45 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-12 -0.45 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="17 -0.45 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-17 -0.45 -5" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+		
+
+			<!--	left-right road code	-->
+				<a-box position="6 -0.5 25" width="29" height="6" rotation="-90 0 0" src="#road"></a-box>
+				<a-box position="-6 -0.5 25" width="29" height="6" rotation="-90 0 0" src="#road"></a-box>
+					<!--	white strups-->
+
+						<a-box position="7 -0.45 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-7 -0.45 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="12 -0.45 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-12 -0.45 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="17 -0.45 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-17 -0.45 25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+		
+			<!--   Left/right road code at location -5 -->
+				<a-box position="6 -0.5 -25" width="29" height="6" rotation="-90 0 0" src="#road"></a-box>
+				<a-box position="-6 -0.5 -25" width="29" height="6" rotation="-90 0 0" src="#road"></a-box>
+						<!-- white lines in left/right road-->
+						<a-box position="7 -0.45 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-7 -0.45 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="12 -0.45 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-12 -0.45 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="17 -0.45 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+						<a-box position="-17 -0.45 -25" width="2.5" height="0.5" rotation="-90 0 0" color="white"></a-box>
+		
+			<!--		-->
+						
+			<!---  yellow lines initilization-->			
+					<a-box position="2.6 -0.45 10" rotation="-90 0 0" width="0.25" height="24" color="yellow"></a-box>
+					<a-box position="-2.6 -0.45 10" rotation="-90 0 0" width="0.25" height="24" color="yellow"></a-box>
+				
+					<a-box position="2.6 -0.45 -15" rotation="-90 0 0" width="0.25" height="14" color="yellow"></a-box>
+					<a-box position="-2.6 -0.45 -15" rotation="-90 0 0" width="0.25" height="14" color="yellow"></a-box>
+				
+		<!--  Footpath initialization-->
+				
+				<a-plane position="4.2 0 -15" rotation="-90 0 0" width="2.5" src="#footpath" height="14"></a-plane>
+				<a-plane position="-4.2 0 -15" rotation="-90 0 0" width="2.5" src="#footpath" height="14"></a-plane>
+
+				<a-plane position="4.2 0 10" rotation="-90 0 0" width="2.5" src="#footpath" height="24"></a-plane>
+				<a-plane position="-4.2 0 10" rotation="-90 0 0" width="2.5" src="#footpath" height="24"></a-plane>
+
+				<a-plane position="4.2 0.1 -15" rotation="-90 0 0" width="2.5" src="#footpath" height="14"></a-plane>
+				<a-plane position="-4.2 0.1 -15" rotation="-90 0 0" width="2.5" src="#footpath" height="14"></a-plane>
+
+				<a-plane position="4.2 0.1 10" rotation="-90 0 0" width="2.5" src="#footpath" height="24"></a-plane>
+				<a-plane position="-4.2 0.1 10" rotation="-90 0 0" width="2.5" src="#footpath" height="24"></a-plane>
+
+			<!---   internal border of  footpath-->
+				<a-plane position="2.95 0.05 10" rotation="0 90 0" src="#footpath" width="24" height="0.1"></a-plane>
+				<a-plane position="-2.95 0.05 10" rotation="0 90 0" src="#footpath" width="24" height="0.1"></a-plane>
+
+				<a-plane position="2.95 0.05 -15" rotation="0 90 0" src="#footpath" width="14" height="0.1"></a-plane>
+				<a-plane position="-2.95 0.05 -15" rotation="0 90 0" src="#footpath" width="14" height="0.1"></a-plane>
+
+			<!--	external border of footpath-->
+				<a-plane position="5.45 0.05 10" rotation="0 90 0" src="#footpath" width="24" height="0.1"></a-plane>
+				<a-plane position="-5.45 0.05 10" rotation="0 90 0" src="#footpath" width="24" height="0.1"></a-plane>
+
+				<a-plane position="5.45 0.05 -15" rotation="0 90 0" src="#footpath" width="14" height="0.1"></a-plane>
+				<a-plane position="-5.45 0.05 -15" rotation="0 90 0" src="#footpath" width="14" height="0.1"></a-plane>
+				
+
+			<!--    footpath material-->
+
+				<a-plane position="4.2 0.05 -8" rotation="0 0 0" src="#footpath" width="2.5" height="0.1"></a-plane>
+				<a-plane position="-4.2 0.05 -8" rotation="0 0 0" src="#footpath" width="2.5" height="0.1"></a-plane>
+
+				<a-plane position="4.2 0.05 -2" rotation="0 0 0" src="#footpath" width="2.5" height="0.1"></a-plane>
+				<a-plane position="-4.2 0.05 -2" rotation="0 0 0" src="#footpath" width="2.5" height="0.1"></a-plane>
+
+				<a-plane position="4.2 0.05 22" rotation="0 0 0" color="#B22222" width="2.5" height="0.1"></a-plane>
+				<a-plane position="-4.2 0.05 22" rotation="0 0 0" color="#B22222" width="2.5" height="0.1"></a-plane>
+
+		<!-- 	grass beside walls	-->
+				
+				<a-entity scale="0.1 0.2 0.3" geometry="primitive : torusKnot" position="-5.4 0.1 -8.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -8.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -8.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -8.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -9" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.25 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -9.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -9.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.1" geometry="primitive : torusKnot" position="-5.4 0.1 -9.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -9.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -10" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -10.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -10.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.15 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -10.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.24 0.23 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -10.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -11" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.13 0.13 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -11.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -11.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -11.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.22 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -11.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -12" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -12.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -12.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -12.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -12.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -13" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -13.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -13.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -13.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -13.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.3 0.1" geometry="primitive : torusKnot" position="-5.4 0.1 -14" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -14.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -14.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.23 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -14.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.32 0.32 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -14.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -15" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.22 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -15.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -15.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -15.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -15.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.32 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -16" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -16.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -16.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -16.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -16.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -17" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -17.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.22 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -17.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -17.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.22 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -17.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -18" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.25 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -18.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -18.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -18.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.32 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -18.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -19" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -19.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.32 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -19.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -19.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -19.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -20" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -20.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -20.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.32 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -20.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.32 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -20.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.23 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -21" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -21.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.22 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -21.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.32 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -21.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.23 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -21.8" material="src:#fgrass"></a-entity>
+
+
+				<a-entity scale="0.1 0.2 0.3" geometry="primitive : torusKnot" position="5.4 0.1 -8.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -8.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -8.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -8.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -9" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.25 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -9.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -9.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.1" geometry="primitive : torusKnot" position="5.4 0.1 -9.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -9.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -10" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -10.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -10.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.15 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -10.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.24 0.23 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -10.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -11" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.13 0.13 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -11.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -11.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -11.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.22 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -11.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -12" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -12.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -12.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -12.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -12.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -13" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -13.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -13.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -13.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -13.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.3 0.1" geometry="primitive : torusKnot" position="5.4 0.1 -14" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -14.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -14.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.23 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -14.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.32 0.32 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -14.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -15" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.22 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -15.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -15.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -15.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -15.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.32 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -16" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -16.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -16.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -16.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -16.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -17" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -17.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.22 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -17.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -17.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.22 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -17.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -18" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.25 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -18.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -18.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -18.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.32 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -18.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -19" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -19.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.32 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -19.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -19.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -19.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -20" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -20.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -20.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.32 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -20.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.32 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -20.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.23 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -21" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -21.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.22 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -21.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.32 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -21.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.23 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -21.8" material="src:#fgrass"></a-entity>
+
+			<!--  grass for front buildings  -->
+
+				<a-entity scale="0.1 0.3 0.3" geometry="primitive : torusKnot" position="-5.4 0.1 -1.7" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.3" geometry="primitive : torusKnot" position="-5.4 0.1 -1.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -1.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -1.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -1" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -0.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.25 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -0.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 -0.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.1" geometry="primitive : torusKnot" position="-5.4 0.1 -0.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 0" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 0.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 0.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 0.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.15 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 0.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.24 0.23 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 1" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 1.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.13 0.13 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 1.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 1.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 1.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.22 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 2.0" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 2.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 2.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.3" geometry="primitive : torusKnot" position="-5.4 0.1 2.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 2.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 3" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 3.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 3.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.25 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 3.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 3.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.1" geometry="primitive : torusKnot" position="-5.4 0.1 4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 4.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 4.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 4.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 4.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.15 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 5" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.24 0.23 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 5.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 5.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.13 0.13 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 5.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 5.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.22 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 6.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 6.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 6.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 6.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 7" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 7.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 7.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 7.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 7.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.3" geometry="primitive : torusKnot" position="-5.4 0.1 8.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 8.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 8.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 8.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 9" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.25 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 9.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 9.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.1" geometry="primitive : torusKnot" position="-5.4 0.1 9.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 9.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 10" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 10.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 10.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.15 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 10.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.24 0.23 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 10.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 11" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.13 0.13 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 11.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 11.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 11.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.22 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 11.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 12" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 12.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 12.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 12.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 12.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 13" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 13.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 13.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 13.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 13.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.3 0.1" geometry="primitive : torusKnot" position="-5.4 0.1 14" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 14.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.3 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 14.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.23 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 14.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.32 0.32 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 14.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 15" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.22 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 15.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 15.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 15.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 15.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.32 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 16" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 16.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 16.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 16.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 16.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 17" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 17.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.22 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 17.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 17.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.22 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 17.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 18" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.25 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 18.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 18.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 18.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.32 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 18.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 19" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 19.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.32 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 19.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 19.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 19.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 20" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 20.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.21 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 20.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.32 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 20.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.32 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 20.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.23 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 21" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 21.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.22 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 21.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.32 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 21.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.23 0.2" geometry="primitive : torusKnot" position="-5.4 0.1 21.8" material="src:#fgrass"></a-entity>
+
+
+
+				<a-entity scale="0.1 0.3 0.3" geometry="primitive : torusKnot" position="5.4 0.1 -1.7" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.3" geometry="primitive : torusKnot" position="5.4 0.1 -1.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -1.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -1.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -1" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -0.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.25 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -0.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 -0.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.1" geometry="primitive : torusKnot" position="5.4 0.1 -0.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 0" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 0.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 0.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 0.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.15 0.2" geometry="primitive : torusKnot" position="5.4 0.1 0.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.24 0.23 0.2" geometry="primitive : torusKnot" position="5.4 0.1 1" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 1.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.13 0.13 0.2" geometry="primitive : torusKnot" position="5.4 0.1 1.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 1.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 1.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.22 0.2" geometry="primitive : torusKnot" position="5.4 0.1 2.0" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 2.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 2.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.3" geometry="primitive : torusKnot" position="5.4 0.1 2.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 2.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 3" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 3.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 3.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.25 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 3.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 3.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.1" geometry="primitive : torusKnot" position="5.4 0.1 4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 4.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 4.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 4.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 4.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.15 0.2" geometry="primitive : torusKnot" position="5.4 0.1 5" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.24 0.23 0.2" geometry="primitive : torusKnot" position="5.4 0.1 5.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 5.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.13 0.13 0.2" geometry="primitive : torusKnot" position="5.4 0.1 5.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 5.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.22 0.2" geometry="primitive : torusKnot" position="5.4 0.1 6.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 6.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 6.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 6.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 7" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 7.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 7.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 7.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 7.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.3" geometry="primitive : torusKnot" position="5.4 0.1 8.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 8.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 8.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 8.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 9" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.25 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 9.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 9.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.1" geometry="primitive : torusKnot" position="5.4 0.1 9.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 9.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 10" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 10.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 10.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.15 0.2" geometry="primitive : torusKnot" position="5.4 0.1 10.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.24 0.23 0.2" geometry="primitive : torusKnot" position="5.4 0.1 10.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.15 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 11" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.13 0.13 0.2" geometry="primitive : torusKnot" position="5.4 0.1 11.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 11.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 11.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.22 0.2" geometry="primitive : torusKnot" position="5.4 0.1 11.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 12" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 12.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 12.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 12.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 12.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 13" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 13.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 13.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 13.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 13.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.3 0.3 0.1" geometry="primitive : torusKnot" position="5.4 0.1 14" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 14.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.3 0.2" geometry="primitive : torusKnot" position="5.4 0.1 14.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.23 0.2" geometry="primitive : torusKnot" position="5.4 0.1 14.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.32 0.32 0.2" geometry="primitive : torusKnot" position="5.4 0.1 14.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 15" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.22 0.2" geometry="primitive : torusKnot" position="5.4 0.1 15.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 15.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 15.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 15.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.32 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 16" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 16.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.1 0.2" geometry="primitive : torusKnot" position="5.4 0.1 16.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.1 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 16.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 16.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 17" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 17.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.22 0.2" geometry="primitive : torusKnot" position="5.4 0.1 17.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 17.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.22 0.2" geometry="primitive : torusKnot" position="5.4 0.1 17.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 18" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.25 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 18.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 18.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 18.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.32 0.2" geometry="primitive : torusKnot" position="5.4 0.1 18.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 19" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 19.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.32 0.2" geometry="primitive : torusKnot" position="5.4 0.1 19.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 19.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.2 0.2" geometry="primitive : torusKnot" position="5.4 0.1 19.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 20" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.2 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 20.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.21 0.2" geometry="primitive : torusKnot" position="5.4 0.1 20.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.32 0.2" geometry="primitive : torusKnot" position="5.4 0.1 20.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.32 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 20.8" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.12 0.23 0.2" geometry="primitive : torusKnot" position="5.4 0.1 21" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.12 0.2" geometry="primitive : torusKnot" position="5.4 0.1 21.2" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.21 0.22 0.2" geometry="primitive : torusKnot" position="5.4 0.1 21.4" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.22 0.32 0.2" geometry="primitive : torusKnot" position="5.4 0.1 21.6" material="src:#fgrass"></a-entity>
+				<a-entity scale="0.23 0.23 0.2" geometry="primitive : torusKnot" position="5.4 0.1 21.8" material="src:#fgrass"></a-entity>
+		
+
+				<!---    bulding blocks front-->
+
+				<a-box position="6 0.5 -15" rotation="0 90 0" src="#walltexture" width="14" height="10"></a-box>
+				<a-box position="-6 0.5 -15" rotation="0 90 0" src="#walltexture" width="14" height="10"></a-box>
+
+				<a-box position="13 0.5 -21.5" rotation="0 0 0" src="#walltexture"
+				 width="15" height="10"></a-box>
+				 <a-box position="-13 0.5 -21.5" rotation="0 0 0" src="#walltexture"
+				 width="15" height="10"></a-box>
+
+				 <a-box position="13 0.5 -8.5" rotation="0 0 0" src="#walltexture"
+				 width="15" height="10"></a-box>
+				 <a-box position="-13 0.5 -8.5" rotation="0 0 0" src="#walltexture"
+				 width="15" height="10"></a-box>
+
+				 <a-box position="20 0.5 -15" rotation="0 90 0" src="#walltexture" width="14" height="10"></a-box>
+				<a-box position="-20 0.5 -15" rotation="0 90 0" src="#walltexture" width="14" height="10"></a-box>
+
+
+				 <!-- roof of the buildings front-->
+
+				 	<a-box position="-13 6 -15" rotation="90 0 0" src="roof.jpg" width="16" height="15"></a-box>
+				 	<a-box position="13 6 -15" rotation="90 0 0" src="roof.jpg" width="16" height="15"></a-box>
+
+				 <!--	roof of the building back	-->
+				 	<a-box position="-13 6 10" rotation="90 0 0" src="roof.jpg" width="16" height="25"></a-box>
+				 	<a-box position="13 6 10" rotation="90 0 0" src="roof.jpg" width="16" height="25"></a-box>
+
+
+				 <!-- 	lights poll codes front--> 	
+
+				 		<a-cylinder position="4.8 0 -8" radius="0.1" src="#poll" height="15"></a-cylinder>
+				 		<a-cylinder position="-4.8 0 -8" radius="0.1" src="#poll" height="15"></a-cylinder>
+				 		<a-cylinder position="4.8 0 -22" radius="0.1" src="#poll" height="15"></a-cylinder>
+				 		<a-cylinder position="-4.8 0 -22" radius="0.1" src="#poll" height="15"></a-cylinder>
+
+  						
+				 		<a-entity position="4.8 7.5 -8" color="red" gltf-model="#skull">
+				 			<a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite">
+				 		</a-entity>
+				 		<a-entity gltf-model="#skull" position="-4.8 7.5 -8">
+				 			<a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite">
+				 		</a-entity>
+				 		<a-entity gltf-model="#skull" position="4.8 7.5 -22">
+				 			<a-animation attribute="rotation" dur="10000" to="0 -360 0" repeat="indefinite">
+				 		</a-entity>
+				 		<a-entity gltf-model="#skull" position="-4.8 7.5 -22">
+				 			<a-animation attribute="rotation" dur="10000" to="0 -360 0" repeat="indefinite">
+				 		</a-entity>
+
+				 		
+				 <!-- 	lights poll codes back	-->	
+				 	
+				 		<a-cylinder position="4.8 0 -2" radius="0.1" src="poll.jpg" height="15"></a-cylinder>
+				 		<a-cylinder position="-4.8 0 -2" radius="0.1" src="poll.jpg" height="15"></a-cylinder>	
+				 		<a-cylinder position="4.8 0 22" radius="0.1" src="poll.jpg" height="15"></a-cylinder>
+				 		<a-cylinder position="-4.8 0 22" radius="0.1" src="poll.jpg" height="15"></a-cylinder>
+
+				 		<a-entity position="4.8 7.5 -2" gltf-model="#skull">
+				 			<a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite">
+				 		</a-entity>
+				 		<a-entity gltf-model="#skull" position="-4.8 7.5 -2">
+				 			<a-animation attribute="rotation" dur="10000" to="0 360 0" repeat="indefinite">
+				 		</a-entity>
+				 		<a-entity gltf-model="#skull" position="4.8 7.5 22">
+				 			<a-animation attribute="rotation" dur="10000" to="0 -360 0" repeat="indefinite">
+				 		</a-entity>
+				 		<a-entity gltf-model="#skull" position="-4.8 7.5 22">
+				 			<a-animation attribute="rotation" dur="10000" to="0 -360 0" repeat="indefinite">
+				 		</a-entity>
+				 		
+				 <!--  building block back-->
+				 <a-box position="6 0.5 10" rotation="0 90 0" src="#walltexture" width="24" height="10"></a-box>
+				<a-box position="-6 0.5 10" rotation="0 90 0" src="#walltexture" width="24" height="10"></a-box>
+
+				<a-box position="13 0.5 -1.5" rotation="0 0 0" src="#walltexture"
+				 width="15" height="10"></a-box>
+				 <a-box position="-13 0.5 -1.5 rotation="0 0 0" src="#walltexture"
+				 width="15" height="10"></a-box>
+
+				 <a-box position="13 0.5 21.5" rotation="0 0 0" src="#walltexture"
+				 width="15" height="10"></a-box>
+				 <a-box position="-13 0.5 21.5" rotation="0 0 0" src="#walltexture"
+				 width="15" height="10"></a-box>
+
+				  <a-box position="20 0.5 10" rotation="0 90 0" src="#walltexture" width="24" height="10"></a-box>
+				<a-box position="-20 0.5 10" rotation="0 90 0" src="#walltexture" width="24" height="10"></a-box>				 
+
+		</a-scene>
+	</body>
+</html>
